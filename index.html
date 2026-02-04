@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ian Vincent Tampos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    /* subtle scanlines */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.02),
+        rgba(255,255,255,0.02) 1px,
+        transparent 1px,
+        transparent 3px
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
+  </style>
+</head>
+
+<body class="bg-[#0b132b] text-[#f7f7f7]">
+  <main class="relative z-10 max-w-6xl mx-auto px-6 py-12">
+
+    <!-- Header -->
+    <section class="bg-[#1c2541] border border-white/10 rounded-xl overflow-hidden mb-16">
+
+      <!-- Header main -->
+      <div class="p-8">
+        <h1 class="text-3xl md:text-4xl font-semibold text-[#f4d35e]">  
+          &gt; Ian Vincent Tampos  
+          <img
+    src="https://media.licdn.com/dms/image/v2/C4D03AQEeEMIpZxqOvQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1656137327844?e=1772064000&v=beta&t=yWKxUqi1L1qt4d-BP12NjFDdZt6kdkbWTjvXhcRExZ8"
+    alt="Ian Vincent Tampos"
+    class="w-16 h-16 md:w-20 md:h-20 rounded-full float-right object-cover
+           border-2 border-[#f4d35e]/60
+           shadow-md"
+  />
+        </h1>  
+        <p class="mt-3 text-[#b8c1ec]">
+          <span class="text-sky-400">$</span> Software Engineer • Creative Builder • Explorer
+        </p>
+      </div>
+
+      <!-- Header footer / contacts -->
+      <div class="border-t border-white/10 bg-black/20 px-8 py-4 flex flex-wrap gap-4 text-sm text-[#b8c1ec]">
+        <a href="mailto:mivatampos@gmail.com" class="hover:text-[#f4d35e] transition">
+          email: mivatampos@gmail.com
+        </a>
+        <span class="opacity-40">|</span>
+        <a href="https://github.com/Tmpts21" target="_blank" class="hover:text-[#f4d35e] transition"> 
+          github:Tmpts21
+        </a>
+        <span class="opacity-40">|</span>
+        <a href="https://www.linkedin.com/in/ian-vincent-tampos-0422601a7" target="_blank" class="hover:text-[#f4d35e] transition">
+          linkedin: /IanVincentTampos
+        </a>
+      </div>
+
+    </section>
+
+    <!-- Projects -->
+    <section class="mb-20">
+      <h2 class="text-xl font-semibold border-l-4 border-[#f4d35e] pl-4 mb-8">
+        Projects
+      </h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-[#1c2541] border border-white/10 rounded-xl p-6 hover:-translate-y-1 hover:shadow-2xl transition">
+          <h3 class="text-[#f4d35e] font-semibold mb-2">Taragala</h3>
+          <p class="text-[#b8c1ec] text-sm">
+            An adventure travel platform for hikers and explorers.
+          </p>
+        </div>
+
+        <div class="bg-[#1c2541] border border-white/10 rounded-xl p-6 hover:-translate-y-1 hover:shadow-2xl transition">
+          <h3 class="text-[#f4d35e] font-semibold mb-2">AI FAQ Generator</h3>
+          <p class="text-[#b8c1ec] text-sm">
+            Upload PDFs and generate intelligent FAQs using LLMs.
+          </p>
+        </div>
+
+        <div class="bg-[#1c2541] border border-white/10 rounded-xl p-6 hover:-translate-y-1 hover:shadow-2xl transition">
+          <h3 class="text-[#f4d35e] font-semibold mb-2">Retro Portfolio</h3>
+          <p class="text-[#b8c1ec] text-sm">
+            Terminal-inspired personal website with modern UX.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="text-center text-sm text-[#b8c1ec] mt-20">
+      © 2026 <span class="text-[#f4d35e]">Ian Vincent Tampos 🚀</span>
+    </footer>
+
+  </main>
+</body>
+</html>
