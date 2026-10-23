@@ -2,114 +2,213 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Ian Vincent Tampos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b132b" />
 
-  <!-- Tailwind CDN -->
+  <title>Ian Vincent Tampos | Developer Portfolio</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
-  <style>
-    body {
-      font-family: "IBM Plex Mono", monospace;
-    }
-
-    /* subtle scanlines */
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: repeating-linear-gradient(
-        to bottom,
-        rgba(255,255,255,0.02),
-        rgba(255,255,255,0.02) 1px,
-        transparent 1px,
-        transparent 3px
-      );
-      pointer-events: none;
-      z-index: 0;
-    }
-  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: "#0b132b",
+            surface: "#151f3b",
+            accent: "#f4d35e",
+            muted: "#a9b5d0",
+          },
+          fontFamily: {
+            mono: ['"IBM Plex Mono"', "monospace"],
+            sans: ["Inter", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
 </head>
 
-<body class="bg-[#0b132b] text-[#f7f7f7]">
-  <main class="relative z-10 max-w-6xl mx-auto px-6 py-12">
+<body class="bg-navy font-sans text-gray-100 antialiased selection:bg-accent selection:text-navy">
+
+  <main class="mx-auto max-w-6xl px-5 py-10 sm:px-8 sm:py-16">
 
     <!-- Header -->
-    <section class="bg-[#1c2541] border border-white/10 rounded-xl overflow-hidden mb-16">
+    <header class="mb-20 overflow-hidden rounded-2xl border border-white/10 bg-surface sm:mb-24">
 
-      <!-- Header main -->
-      <div class="p-8">
-        <h1 class="text-3xl md:text-4xl font-semibold text-[#f4d35e]">  
-          &gt; Ian Vincent Tampos  
-          <img
-    src="https://media.licdn.com/dms/image/v2/C4D03AQEeEMIpZxqOvQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1656137327844?e=1772064000&v=beta&t=yWKxUqi1L1qt4d-BP12NjFDdZt6kdkbWTjvXhcRExZ8"
-    alt="Ian Vincent Tampos"
-    class="w-16 h-16 md:w-20 md:h-20 rounded-full float-right object-cover
-           border-2 border-[#f4d35e]/60
-           shadow-md"
-  />
-        </h1>  
-        <p class="mt-3 text-[#b8c1ec]">
-          <span class="text-sky-400">$</span> Software Engineer • Creative Builder • Explorer
+      <div class="p-6 sm:p-10 lg:p-12">
+        <div class="flex flex-col-reverse items-start justify-between gap-8 sm:flex-row sm:items-center">
+
+          <div class="max-w-2xl">
+            <h1 class="text-3xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
+              Hi, I'm <span class="text-accent">Ian.</span>
+            </h1>
+
+            <p class="mt-5 max-w-xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
+              Software engineer who enjoys building useful things,
+            </p>
+
+            <div class="mt-7 flex flex-wrap items-center gap-3 font-mono text-xs sm:text-sm">
+              <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+              <span class="text-muted">Building things and exploring ideas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social links -->
+      <nav
+        aria-label="Contact links"
+        class="flex flex-wrap gap-x-6 gap-y-4 border-t border-white/10 px-6 py-5 sm:px-10 lg:px-12"
+      >
+        <a
+          href="mailto:mivatampos@gmail.com"
+          class="font-mono text-xs text-muted transition-colors hover:text-accent sm:text-sm"
+        >
+          Email ↗
+        </a>
+
+        <a
+          href="https://github.com/Tmpts21"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-mono text-xs text-muted transition-colors hover:text-accent sm:text-sm"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/ian-vincent-tampos-0422601a7"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-mono text-xs text-muted transition-colors hover:text-accent sm:text-sm"
+        >
+          LinkedIn ↗
+        </a>
+      </nav>
+    </header>
+
+    <!-- Fun Projects -->
+    <section id="projects" class="mb-20 sm:mb-24">
+
+      <div class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+
+          <h2 class="text-2xl font-semibold tracking-tight sm:text-3xl">
+            Fun Projects I Made<span class="text-accent">.</span>
+          </h2>
+        </div>
+
+   
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+        <!-- Project Card 01 -->
+        <article class="group rounded-xl border border-white/10 bg-surface p-6 transition-all duration-200 hover:-translate-y-1 hover:border-accent/40 hover:bg-[#1b2948] sm:p-7">
+
+        <div class="mb-3 flex items-center justify-between gap-3">
+            <h3 class="text-lg font-medium">Directory Organizer</h3>
+
+            <a
+                href="https://github.com/Tmpts21/YOUR_REPOSITORY"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="shrink-0 font-mono text-xs text-muted transition-colors hover:text-accent"
+            >
+                GitHub ↗
+            </a>
+        </div>
+          <p class="text-sm leading-6 text-muted">
+           A simple, cross-platform file organizer built with Python that automatically sorts files into categorized folders based on their file extensions. It supports images, documents, videos, and etc. with customizable directories and file types through a JSON configuration file. Works on Windows, macOS, and Linux.
+          </p>
+
+        <div class="mt-6 flex flex-wrap gap-2 font-mono text-xs text-muted"> 
+
+            <span class="rounded-md bg-white/5 px-2.5 py-1.5">Python</span> 
+            <a
+                href="https://github.com/YOUR_USERNAME/YOUR_REPOSITORY"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rounded-md bg-white/5 px-2.5 py-1.5 transition hover:bg-white/10 hover:text-white"
+            >
+                GitHub ↗
+            </a>
+            </div> 
+        </article>
+
+        <!-- Project Card 02 -->
+        <article class="group rounded-xl border border-white/10 bg-surface p-6 transition-all duration-200 hover:-translate-y-1 hover:border-accent/40 hover:bg-[#1b2948] sm:p-7"> 
+
+        <div class="mb-3 flex items-center justify-between gap-3">
+            <h3 class="text-lg font-medium">Directory Organizer</h3>
+
+            <a
+                href="https://github.com/Tmpts21/YOUR_REPOSITORY"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="shrink-0 font-mono text-xs text-muted transition-colors hover:text-accent"
+            >
+                GitHub ↗
+            </a>
+        </div>
+          <p class="text-sm leading-6 text-muted">
+            A fun little project I made when I was first learning the basics of cybersecurity in college. Inspired by WPScan, this was my own attempt at building a simple tool to explore website scanning and basic security checks. Nothing too advanced, but it was a fun way to learn, experiment, and get hands-on experience with cybersecurity!
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-2 font-mono text-xs text-muted">
+            <span class="rounded-md bg-white/5 px-2.5 py-1.5">Python</span>
+            <span class="rounded-md bg-white/5 px-2.5 py-1.5">Cybersec</span>
+            <span class="rounded-md bg-white/5 px-2.5 py-1.5">Wordpress</span> 
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="mb-20 rounded-2xl border border-white/10 bg-surface p-6 sm:mb-24 sm:p-10">
+
+      <p class="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-accent">
+        A bit about me
+      </p>
+
+      <div class="grid gap-6 sm:grid-cols-[1fr_1.3fr] sm:gap-12">
+        <h2 class="text-2xl font-semibold leading-snug sm:text-3xl">
+          Curious by nature.<br />
+          <span class="text-muted">Developer by trade.</span>
+        </h2>
+
+        <p class="text-sm leading-7 text-muted sm:text-base">
+          I enjoy learning how things work, building tools that solve real problems,
+          and exploring ideas outside my day-to-day work.
         </p>
       </div>
-
-      <!-- Header footer / contacts -->
-      <div class="border-t border-white/10 bg-black/20 px-8 py-4 flex flex-wrap gap-4 text-sm text-[#b8c1ec]">
-        <a href="mailto:mivatampos@gmail.com" class="hover:text-[#f4d35e] transition">
-          email: mivatampos@gmail.com
-        </a>
-        <span class="opacity-40">|</span>
-        <a href="https://github.com/Tmpts21" target="_blank" class="hover:text-[#f4d35e] transition"> 
-          github:Tmpts21
-        </a>
-        <span class="opacity-40">|</span>
-        <a href="https://www.linkedin.com/in/ian-vincent-tampos-0422601a7" target="_blank" class="hover:text-[#f4d35e] transition">
-          linkedin: /IanVincentTampos
-        </a>
-      </div>
-
     </section>
-
-    <!-- Projects -->
-    <section class="mb-20">
-      <h2 class="text-xl font-semibold border-l-4 border-[#f4d35e] pl-4 mb-8">
-        Projects
-      </h2>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-[#1c2541] border border-white/10 rounded-xl p-6 hover:-translate-y-1 hover:shadow-2xl transition">
-          <h3 class="text-[#f4d35e] font-semibold mb-2">Taragala</h3>
-          <p class="text-[#b8c1ec] text-sm">
-            An adventure travel platform for hikers and explorers.
-          </p>
-        </div>
-
-        <div class="bg-[#1c2541] border border-white/10 rounded-xl p-6 hover:-translate-y-1 hover:shadow-2xl transition">
-          <h3 class="text-[#f4d35e] font-semibold mb-2">AI FAQ Generator</h3>
-          <p class="text-[#b8c1ec] text-sm">
-            Upload PDFs and generate intelligent FAQs using LLMs.
-          </p>
-        </div>
-
-        <div class="bg-[#1c2541] border border-white/10 rounded-xl p-6 hover:-translate-y-1 hover:shadow-2xl transition">
-          <h3 class="text-[#f4d35e] font-semibold mb-2">Retro Portfolio</h3>
-          <p class="text-[#b8c1ec] text-sm">
-            Terminal-inspired personal website with modern UX.
-          </p>
-        </div>
-      </div>
-    </section>
-
 
     <!-- Footer -->
-    <footer class="text-center text-sm text-[#b8c1ec] mt-20">
-      © 2026 <span class="text-[#f4d35e]">Ian Vincent Tampos 🚀</span>
+    <footer class="flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+      <p class="font-mono text-xs text-muted">
+        © <span id="year">2026</span> Ian Vincent Tampos
+      </p>
+
+      <p class="font-mono text-xs text-muted">
+        Made with curiosity <span class="text-accent">✳</span> and a little code.
+      </p>
     </footer>
 
   </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
